@@ -11,6 +11,13 @@ $(document).ready(function() {
         var enroll = $('#enroll').val();
         var dob = $('#dob').val();
         var password = $('#password').val();
+
+        if (parseInt(enroll) >= 1) {
+            chrome.browserAction.setBadgeText({ "text": "L" });
+        } else {
+            chrome.browserAction.setBadgeText({ "text": "" });
+        }
+
         chrome.storage.sync.set({ 'institute': institute, 'enroll': enroll, 'dob': dob, 'password': password }, function() {
             var notifOptions = {
                 type: "basic",
