@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Options</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="options.js"></script>
+    <style>
+        .container {
+            width: 150px;
+            clear: both;
+            margin: auto;
+            vertical-align: center;
+        }
+        
+        .container input {
+            width: 100%;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <form id="form">
+            Institute :
+            <select id="institute">
+            <option>J128</option>
+            <option>JIIT</option>
+            <option>JPBS</option>
+        </select>
+            <br/> Enrollment No: <input type="text" id="enroll">
+            <br/> DOB [DD-MM-YYYY]: <input type="text" id="dob">
+            <br/> Password: <input type="password" id="password">
+            <br/>
+            <input type="submit" name="Submit" id="submit_button">
+        </form>
+
+    </div>
+
+</body>
+
+</html>

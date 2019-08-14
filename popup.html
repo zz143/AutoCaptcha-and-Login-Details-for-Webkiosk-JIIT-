@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Webkiosk Login Helper</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="popup.js"></script>
+    <style>
+        .button {
+            display: block;
+            width: 115px;
+            background: #4E9CAF;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 0 auto;
+        }
+        
+        p {
+            width: 200px;
+        }
+        
+        html {
+            border: 1px solid black;
+        }
+        
+        footer {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Currently Logged in: <b id="userRollNumber"></b></p>
+    <a class="button" href="options.html" target="popup">Update Record!</a>
+
+    <br/><br/>
+    <footer>
+        <a href="https://github.com/BugsNotFound/Webkiosk-Login-Helper" target="_blank"><i class="fa fa-github fa-2x tx1"></i></a>
+        <a href="javascript:void(0)" id="sendEmail"><i class="fa fa-envelope-o fa-2x tx1"></i></a>
+
+    </footer>
+</body>
+
+</html>
