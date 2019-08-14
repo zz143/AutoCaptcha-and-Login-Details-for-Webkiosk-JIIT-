@@ -1,31 +1,52 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title></title>
-	<script src="jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="popup.js"></script>
+    <title>Webkiosk Login Helper</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="popup.js"></script>
+    <style>
+        .button {
+            display: block;
+            width: 115px;
+            background: #4E9CAF;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 0 auto;
+        }
+        
+        p {
+            width: 200px;
+        }
+        
+        html {
+            border: 1px solid black;
+        }
+        
+        footer {
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-	<font color="blue"><b>Privacy Policy</b></font><br>
-	<font color="green">We do not collect any of your information like Password, DOB etc.All the data are stored locally on your computer.</font><br>
-	<font color="red"><b>If you are concerned about your privacy, Please leave the password column blank.</b></font><br>
-	<form id="form">
-		Institute : 
-		<select id="institute">
-			<option>J128</option>
-			<option>JIIT</option>
-			<option>JPBS</option>
-		</select>
-		<br>
-		Enrollment No : 
-		<input type="text" id="enroll">
-		DOB [DD-MM-YYYY]: 
-		<input type="text" id="dob">
-		Password : 
-		<input type="password" id="password">
-		<input type="submit" name="Submit" style="align>
-	</form>
-	<button id="btn">Saved Record</button><br>
-	<font color="#000080">created by : Deepanshu</font>
+    <p>Currently Logged in: <b id="userRollNumber"></b></p>
+    <a class="button" href="options.html" target="popup">Update Record!</a>
+
+    <br/><br/>
+    <footer>
+        <a href="https://github.com/BugsNotFound/Webkiosk-Login-Helper" target="_blank"><i class="fa fa-github fa-2x tx1"></i></a>
+        <a href="javascript:void(0)" id="sendEmail"><i class="fa fa-envelope-o fa-2x tx1"></i></a>
+
+    </footer>
 </body>
+
 </html>
+
+<!---->

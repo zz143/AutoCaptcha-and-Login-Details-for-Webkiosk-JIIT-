@@ -1,16 +1,20 @@
-$(document).ready(function(){
-    $('#form').on('submit',function(){
-    	var institute = $('#institute').val();
-        var enroll = $('#enroll').val();
-        var dob = $('#dob').val();
-        var password = $('#password').val();
-        chrome.storage.sync.set({'institute': institute, 'enroll': enroll, 'dob': dob, 'password': password}, function() {
-        	alert('Record Successfully Saved!. Click "Saved Record" to see');
-    	});
+function sendEmail() {
+    var emailUrl = "mailto:Pctech4uproduction@gmail.com";
+    chrome.tabs.create({
+        url: emailUrl
+    }, function(tab) {
+        setTimeout(function() {
+            chrome.tabs.remove(tab.id);
+        }, 500);
     });
-    $("#btn").click(function(){
-    	chrome.storage.sync.get(function(data) {
-        	alert(data.institute+", "+data.enroll+", "+data.dob);
-    	});
+}
+
+$(document).ready(function() {
+    chrome.storage.sync.get(function(user) {
+        $('#userRollNumber').text(user.enroll);
     });
+
+    $("#sendEmail").click(function() {
+        sendEmail();
+    })
 });
