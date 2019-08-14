@@ -1,5 +1,5 @@
 function sendEmail() {
-    var emailUrl = "mailto:blah@blah.com";
+    var emailUrl = "mailto:Pctech4uproduction@gmail.com";
     chrome.tabs.create({
         url: emailUrl
     }, function(tab) {
